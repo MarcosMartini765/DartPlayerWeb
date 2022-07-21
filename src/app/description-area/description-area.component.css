@@ -1,0 +1,15 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    max-width: 50%;
+    min-width: 30%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .center > h2 {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,22 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    min-width: 30%;
+    margin: auto;
+}
+
+
+.title {
+    color: var(--accent-color);
+    font-size: 3vw;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+      font-size: 5vw;
+    }
+}

@@ -1,0 +1,31 @@
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 50%;
+    min-width: 30%;
+    margin: auto;
+}
+
+.appName {
+    color: var(--accent-color);
+    font-size: 5vw;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+.appIcon {
+    max-width: 40%;
+    min-width: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .appName {
+      font-size: 7vw;
+    }
+
+    .center {
+        max-width: 80%;
+    }
+}
