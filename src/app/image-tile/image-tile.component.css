@@ -1,0 +1,10 @@
+.tile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image {
+    width: 100px;
+}
+

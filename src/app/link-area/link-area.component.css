@@ -1,7 +1,7 @@
 .center {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 50%;
     min-width: 30%;
@@ -11,7 +11,7 @@
 }
 
 .github-card {
-    max-width: 400px;
+    width: 40%;
     background-color: var(--accent-color);
 }
 
@@ -25,5 +25,18 @@
     background-image: url('https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Fplay-store.png?alt=media');
     background-size: cover;
     filter: invert(100%);
+}
+
+@media only screen and (max-width: 600px) {
+    .center {
+      max-width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .github-card {
+        width: 80%;
+    }
 }
 

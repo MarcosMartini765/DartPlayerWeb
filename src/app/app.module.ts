@@ -10,7 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { TitleAreaComponent } from './title-area/title-area.component';
 import { DescriptionAreaComponent } from './description-area/description-area.component';
 import { LinkAreaComponent } from './link-area/link-area.component';
-import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.component'
+import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.component';
+import { ImageTileComponent } from './image-tile/image-tile.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.co
     TitleAreaComponent,
     DescriptionAreaComponent,
     LinkAreaComponent,
-    ScreenshotsAreaComponent
+    ScreenshotsAreaComponent,
+    ImageTileComponent
   ],
   imports: [
     BrowserModule,
