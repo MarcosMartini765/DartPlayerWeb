@@ -1,9 +1,14 @@
+.screenshot-card {
+    max-width: 400px;
+    height: 443px;
+    background-color: var(--accent-color);
+}
+
 .tile {
     display: flex;
     flex-flow: column wrap;
 }
 
 .image {
-    width: 100px;
+    width: 162px;
 }
-

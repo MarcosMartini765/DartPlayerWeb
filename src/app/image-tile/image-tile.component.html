@@ -1,4 +1,9 @@
 <div class="tile">
-    <h3>{{alt}}</h3>
-    <img class="image" src={{src}} alt={{alt}}/>
+    <mat-card class="screenshot-card">
+        <mat-card-header>
+            <mat-card-title>{{alt}}</mat-card-title>
+            <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="image" src={{src}} alt={{alt}}>
+    </mat-card>
 </div>

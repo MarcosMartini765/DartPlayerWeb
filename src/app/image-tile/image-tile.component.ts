@@ -14,5 +14,6 @@ export class ImageTileComponent implements OnInit {
 
   @Input() src!: string;
   @Input() alt!: string;
+  @Input() subtitle!: string;
 
 }

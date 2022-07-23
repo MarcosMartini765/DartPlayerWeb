@@ -3,14 +3,7 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-}
-
-
-.title {
-    color: var(--accent-color);
-    font-size: 3vw;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
+    gap: 1rem;
 }
 
 .images {
@@ -20,8 +13,19 @@
     gap: 1rem;
 }
 
+.title {
+    color: var(--accent-color);
+    font-size: 3vw;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
 @media only screen and (max-width: 600px) {
     .title {
-      font-size: 5vw;
+        font-size: 5vw;
+    }
+
+    .center {
+        gap: 0.5rem;
     }
 }
