@@ -3,11 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 50%;
-    min-width: 30%;
     margin: auto;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
 .github-card {
@@ -27,16 +24,13 @@
     filter: invert(100%);
 }
 
-@media only screen and (max-width: 600px) {
-    .center {
-      max-width: 80%;
-    }
-
-}
-
 @media only screen and (max-width: 800px) {
     .github-card {
-        width: 80%;
+        width: 100%;
+    }
+
+    .center {
+        gap: 0.5rem;
     }
 }
 

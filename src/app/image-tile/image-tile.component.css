@@ -1,7 +1,6 @@
 .tile {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-flow: column wrap;
 }
 
 .image {
