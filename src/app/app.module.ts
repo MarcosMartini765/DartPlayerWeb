@@ -15,7 +15,9 @@ import { LinkAreaComponent } from './link-area/link-area.component';
 import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.component';
 import { ImageTileComponent } from './image-tile/image-tile.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { AppBarComponent } from './app-bar/app-bar.component'
+import { AppBarComponent } from './app-bar/app-bar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AppBarComponent } from './app-bar/app-bar.component'
     ScreenshotsAreaComponent,
     ImageTileComponent,
     PrivacyPolicyComponent,
-    AppBarComponent
+    AppBarComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,6 @@ import { AppBarComponent } from './app-bar/app-bar.component'
     MatToolbarModule,
     MatIconModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
