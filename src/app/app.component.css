@@ -1,14 +1,26 @@
 .main {
     display: flex;
     flex-direction: column; 
+    width: 100%;
+    margin: auto;
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
     width: 50%;
     margin: auto;
     gap: 4rem;
 }
 
 @media only screen and (max-width: 800px) {
-    .main {
+    .content {
         width: 80%;
         gap: 2rem;
+    }
+
+    .main {
+        gap: 1rem;
     }
 }

@@ -1,5 +1,6 @@
 import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { URL_SCROLL_TO_PRIVACY_POLICY, PRIVACY_POLICY_ID } from "../constants/constants";
+import { PRIVACY_POLICY_ID } from "../constants/constants";
+import { scrollToPrivacyPolicy } from "../functions/scrollToPrivacyPolicy";
 
 @Component({
   selector: 'app-privacy-policy',
@@ -10,17 +11,8 @@ export class PrivacyPolicyComponent implements OnInit, AfterViewChecked {
 
   constructor() { }
 
-  scrollToPrivacyPolicy() {
-    const hash = location.hash;
-
-    switch (hash) {
-      case URL_SCROLL_TO_PRIVACY_POLICY:
-        const element = document.getElementById(PRIVACY_POLICY_ID);
-        element?.scrollIntoView()
-        break;
-      default:
-        break;
-    }
+  scrollTo() {
+    scrollToPrivacyPolicy();
   }
 
   @Input() privacyPolicyId = PRIVACY_POLICY_ID;
@@ -28,7 +20,7 @@ export class PrivacyPolicyComponent implements OnInit, AfterViewChecked {
   ngOnInit(): void { }
 
   ngAfterViewChecked(): void {
-    this.scrollToPrivacyPolicy();
+    this.scrollTo();
   }
 
 }

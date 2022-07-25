@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from "@angular/material/icon";
 
 import { TitleAreaComponent } from './title-area/title-area.component';
 import { DescriptionAreaComponent } from './description-area/description-area.component';
 import { LinkAreaComponent } from './link-area/link-area.component';
 import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.component';
 import { ImageTileComponent } from './image-tile/image-tile.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { AppBarComponent } from './app-bar/app-bar.component'
 
 @NgModule({
   declarations: [
@@ -22,14 +25,17 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     LinkAreaComponent,
     ScreenshotsAreaComponent,
     ImageTileComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    AppBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
