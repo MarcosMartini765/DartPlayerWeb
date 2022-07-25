@@ -25,7 +25,8 @@
         font-size: 5vw;
     }
 
-    .center {
-        gap: 0.5rem;
+    .images {
+        gap: 2rem;
+        justify-content: center;
     }
 }
