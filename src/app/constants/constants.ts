@@ -1,2 +1,5 @@
 export const URL_SCROLL_TO_PRIVACY_POLICY = "#privacyPolicy"
 export const PRIVACY_POLICY_ID = "PRIVACY_POLICY_ID"
+export const SITE_URL = "dartplayer-94fe5.web.app"
+export const EN_US = "en-US"
+export const PT_BR = "pt-BR"

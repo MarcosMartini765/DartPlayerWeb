@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SITE_URL, EN_US, PT_BR } from "../constants/constants";
 
 @Component({
   selector: 'app-not-found',
@@ -10,11 +11,11 @@ export class NotFoundComponent implements OnInit {
   constructor() { }
 
   goToUs() {
-    window.location.href = "https://dartplayer-94fe5.web.app/en-US/";
+    window.location.href = `${SITE_URL}/${EN_US}`;
   }
 
   goToBr() {
-    window.location.href = "https://dartplayer-94fe5.web.app/pt-BR/";
+    window.location.href = `${SITE_URL}/${PT_BR}`;
   }
 
   redirectUser() {

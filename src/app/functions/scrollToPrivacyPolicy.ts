@@ -2,7 +2,7 @@ import { PRIVACY_POLICY_ID, URL_SCROLL_TO_PRIVACY_POLICY } from "../constants/co
 
 function blink(element: HTMLElement | null) {
     if (!element) return
-    
+
     const previousText = element.innerText
     element.innerHTML = `# ${previousText}`
     setTimeout(() => {
@@ -11,17 +11,19 @@ function blink(element: HTMLElement | null) {
 }
 
 export function scrollToPrivacyPolicy() {
-    const hash = location.hash;
+    setTimeout(() => {
+        const hash = location.hash;
 
-    switch (hash) {
-        case URL_SCROLL_TO_PRIVACY_POLICY:
-            const element = document.getElementById(PRIVACY_POLICY_ID);
-            element?.scrollIntoView()
-            blink(element)
-            break;
-        default:
-            break;
-    }
+        switch (hash) {
+            case URL_SCROLL_TO_PRIVACY_POLICY:
+                const element = document.getElementById(PRIVACY_POLICY_ID);
+                element?.scrollIntoView()
+                blink(element)
+                break;
+            default:
+                break;
+        }
+    }, 1000);
 }
 
 export function scrollToPrivacyPolicyClick() {

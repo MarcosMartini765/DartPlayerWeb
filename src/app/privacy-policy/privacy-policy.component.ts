@@ -1,4 +1,4 @@
-import { AfterViewChecked, AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PRIVACY_POLICY_ID } from "../constants/constants";
 import { scrollToPrivacyPolicy } from "../functions/scrollToPrivacyPolicy";
 
@@ -7,7 +7,7 @@ import { scrollToPrivacyPolicy } from "../functions/scrollToPrivacyPolicy";
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.css']
 })
-export class PrivacyPolicyComponent implements OnInit, AfterViewChecked {
+export class PrivacyPolicyComponent implements OnInit {
 
   constructor() { }
 
@@ -17,9 +17,7 @@ export class PrivacyPolicyComponent implements OnInit, AfterViewChecked {
 
   @Input() privacyPolicyId = PRIVACY_POLICY_ID;
 
-  ngOnInit(): void { }
-
-  ngAfterViewChecked(): void {
+  ngOnInit(): void {
     this.scrollTo();
   }
 
