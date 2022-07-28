@@ -13,13 +13,13 @@
 }
 
 .github-header-image {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Flogotipo-do-github.png?alt=media');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Flogotipo-do-github.webp?alt=media');
     background-size: cover;
     filter: invert(100%);
 }
 
 .play-store-header-image {
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Fplay-store.png?alt=media');
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Fplay-store.webp?alt=media');
     background-size: cover;
     filter: invert(100%);
 }
