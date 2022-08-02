@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { scrollToPrivacyPolicyClick } from "../functions/scrollToPrivacyPolicy";
+import { APP_ICON_URL } from "../constants/constants";
 
 @Component({
   selector: 'app-app-bar',
@@ -16,5 +17,7 @@ export class AppBarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  appIconUrl: string = APP_ICON_URL
 
 }
