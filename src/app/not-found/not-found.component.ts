@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SITE_URL, EN_US, PT_BR } from "../constants/constants";
+import { NotFoundService } from './not-found.service';
 
 @Component({
   selector: 'app-not-found',
@@ -8,31 +8,14 @@ import { SITE_URL, EN_US, PT_BR } from "../constants/constants";
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _notFoundService: NotFoundService) { }
 
-  goToUs() {
-    window.location.href = `${SITE_URL}/${EN_US}`;
-  }
-
-  goToBr() {
-    window.location.href = `${SITE_URL}/${PT_BR}`;
-  }
-
-  redirectUser() {
-    const lang = navigator.language
-
-    if (lang.includes("en-")) {
-      this.goToUs();
-    } else if (lang.includes("pt-")) {
-      this.goToBr();
-    } else {
-      this.goToUs();
-    }
-
+  goBackToMain() {
+    this._notFoundService.goBackToMain()
   }
 
   ngOnInit(): void {
-    this.redirectUser();
+    this._notFoundService.setStatus(404, 'Not found')
   }
 
 }

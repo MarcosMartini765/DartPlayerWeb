@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { scrollToPrivacyPolicyClick } from "../functions/scrollToPrivacyPolicy";
-import { APP_ICON_URL } from "../constants/constants";
+import { Component, Inject, OnInit } from '@angular/core';
+import { APP_ICON_URL, PRIVACY_POLICY_ID } from "../constants/constants";
+import { DOCUMENT } from "@angular/common";
 
 @Component({
   selector: 'app-app-bar',
@@ -9,10 +9,13 @@ import { APP_ICON_URL } from "../constants/constants";
 })
 export class AppBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+  ) { }
 
   scrollToPrivacyPolicyOnClick() {
-    scrollToPrivacyPolicyClick();
+    const element = this.document.getElementById(PRIVACY_POLICY_ID)
+    element?.scrollIntoView()
   }
 
   ngOnInit(): void {

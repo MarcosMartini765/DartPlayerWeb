@@ -16,8 +16,8 @@ import { ScreenshotsAreaComponent } from './screenshots-area/screenshots-area.co
 import { ImageTileComponent } from './image-tile/image-tile.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { AppBarComponent } from './app-bar/app-bar.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component'
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +29,11 @@ import { HomeComponent } from './home/home.component'
     ImageTileComponent,
     PrivacyPolicyComponent,
     AppBarComponent,
-    NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,

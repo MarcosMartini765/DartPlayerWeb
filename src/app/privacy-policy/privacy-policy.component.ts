@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { PRIVACY_POLICY_ID } from "../constants/constants";
-import { scrollToPrivacyPolicy } from "../functions/scrollToPrivacyPolicy";
+import { DOCUMENT, Location, isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, OnInit } from '@angular/core';
+import { PRIVACY_POLICY_ID, URL_SCROLL_TO_PRIVACY_POLICY } from "../constants/constants";
 
 @Component({
   selector: 'app-privacy-policy',
@@ -9,16 +9,26 @@ import { scrollToPrivacyPolicy } from "../functions/scrollToPrivacyPolicy";
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    @Inject(DOCUMENT) private doc: Document,
+    @Inject(Location) private location: Location
+  ) { }
 
   scrollTo() {
-    scrollToPrivacyPolicy();
+    if(!this.location.path(true).includes(URL_SCROLL_TO_PRIVACY_POLICY)) return
+    if (!isPlatformBrowser) return
+
+    setTimeout(() => {
+      const element = this.doc.getElementById(PRIVACY_POLICY_ID);
+      if (!element) return
+      element.scrollIntoView()
+    }, 1000);
   }
 
   @Input() privacyPolicyId = PRIVACY_POLICY_ID;
 
   ngOnInit(): void {
-    this.scrollTo();
+    this.scrollTo()
   }
 
 }
