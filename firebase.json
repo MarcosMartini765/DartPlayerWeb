@@ -10,15 +10,10 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "en-US/index.html"
-      },
-      {
-        "source": "/pt{,/**}",
-        "destination": "pt-BR/index.html"
-      },
-      {
-        "source": "/en{,/**}",
-        "destination": "en-US/index.html"
+        "run": {
+          "serviceId": "dartplayer",
+          "region": "southamerica-east1"
+        }
       }
     ]
   }
