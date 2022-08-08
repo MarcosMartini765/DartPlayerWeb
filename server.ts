@@ -32,7 +32,7 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    const preferredLanguage = req.acceptsLanguages()[0]
+    const preferredLanguage = Intl.DateTimeFormat().resolvedOptions().locale;
 
     let locale = "pt-BR"
 
