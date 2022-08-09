@@ -4,12 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "dartplayer-web": {
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "pt-BR": "src/locale/messages.br.xlf"
-        }
-      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -19,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["pt-BR", "en-US"],
             "outputPath": "dist/dartplayer-web/browser",
             "index": "src/index.html",
             "main": "src/main.ts",

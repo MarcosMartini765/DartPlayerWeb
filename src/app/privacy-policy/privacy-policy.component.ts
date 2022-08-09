@@ -15,10 +15,9 @@ export class PrivacyPolicyComponent implements OnInit {
   ) { }
 
   scrollTo() {
-    if(!this.location.path(true).includes(URL_SCROLL_TO_PRIVACY_POLICY)) return
-    if (!isPlatformBrowser) return
-
     setTimeout(() => {
+      if(!this.location.path(true).includes(URL_SCROLL_TO_PRIVACY_POLICY)) return
+      if (!isPlatformBrowser) return
       const element = this.doc.getElementById(PRIVACY_POLICY_ID);
       if (!element) return
       element.scrollIntoView()

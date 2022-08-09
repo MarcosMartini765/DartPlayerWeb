@@ -1,0 +1,47 @@
+{
+    "description-area": {
+        "first": "Um simples porém bonito reprodutor de música",
+        "second": "100% escrito em Kotlin",
+        "third": "É gratuito e open source"
+    },
+    "link-area": {
+        "github-card": {
+            "title": "Github",
+            "subtitle": "Ver o código fonte",
+            "link": "Visitar" 
+        },
+        "play-store-card": {
+            "title": "Play Store",
+            "subtitle": "Disponível para Android",
+            "link": "Baixar"
+        }
+    },
+    "not-found": {
+        "title": "404 - Página não encontrada",
+        "button": "Voltar"
+    },
+    "privacy-policy": {
+        "title": "Política de privacidade",
+        "what-info": {
+            "title": "Informações que coletamos",
+            "first": "Coletamos informações que nos ajudem a manter a estabilidade do aplicativo, como erros e crashes.",
+            "second": "Também coletamos o modelo de telefone, o país e a versão Android. "
+        },
+        "how-info": {
+            "title": "Como usamos as informações coletadas",
+            "first": " Coletamos informações para ajudar a mitigar falhas e erros de modo a experiência de usuário esteja de acordo com nossos objetivos."
+        },
+        "data-collection": {
+            "title": "Desativar coleta de dados",
+            "first": " Você pode desativar a coleta de dados nas configurações do app."
+        }
+    },
+    "screenshots-area": {
+        "dashboard": "Dashboard",
+        "initial-screen": "Tela inicial",
+        "dark": "Escuro",
+        "dark-mode": "Modo escuro",
+        "light": "Claro",
+        "light-mode": "Modo claro"
+    }
+}

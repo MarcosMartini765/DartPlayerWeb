@@ -18,6 +18,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { AppBarComponent } from './app-bar/app-bar.component';
 import { HomeComponent } from './home/home.component'
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

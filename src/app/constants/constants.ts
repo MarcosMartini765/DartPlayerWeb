@@ -7,3 +7,4 @@ export const APP_ICON_URL = "https://firebasestorage.googleapis.com/v0/b/dartpla
 export const DASHBOARD_PHOTO_URL = "https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Fdashboard.webp?alt=media"
 export const DARK_PHOTO_URL = "https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Fdark.webp?alt=media"
 export const LIGHT_PHOTO_URL = "https://firebasestorage.googleapis.com/v0/b/dartplayer-94fe5.appspot.com/o/Sample%2Flight.webp?alt=media"
+export const SITE_NAME = "DartPlayer"

@@ -1,0 +1,47 @@
+{
+    "description-area": {
+        "first": "A simple yet beautiful music player app",
+        "second": "Written 100% in Kotlin",
+        "third": "It's free and open source"
+    },
+    "link-area": {
+        "github-card": {
+            "title": "Github",
+            "subtitle": "View the app source code",
+            "link": "Take a look" 
+        },
+        "play-store-card": {
+            "title": "Play Store",
+            "subtitle": "Available for Android",
+            "link": "Download"
+        }
+    },
+    "not-found": {
+        "title": "404 - Page not found",
+        "button": "Go back"
+    },
+    "privacy-policy": {
+        "title": "Privacy policy",
+        "what-info": {
+            "title": "What information we collect",
+            "first": "We collect information that help us improve the app's stability, such as errors and crashes.",
+            "second": " We also collect the phone model, country and the Android version."
+        },
+        "how-info": {
+            "title": "How we use information we collect",
+            "first": "We collect information to help mitigate crashes and errors so that the user experience is in line with our goals."
+        },
+        "data-collection": {
+            "title": "Opt-out of data collection",
+            "first": "You can opt-out of data collection by disabling this option in the app's settings."
+        }
+    },
+    "screenshots-area": {
+        "dashboard": "Dashboard",
+        "initial-screen": "Initial screen",
+        "dark": "Dark",
+        "dark-mode": "Dark mode",
+        "light": "Light",
+        "light-mode": "Light mode"
+    }
+}

@@ -1,19 +1,18 @@
 import 'zone.js/dist/zone-node';
 
-import { APP_BASE_HREF } from '@angular/common';
-import { ngExpressEngine } from '@nguniversal/express-engine';
+import {APP_BASE_HREF} from '@angular/common';
+import {ngExpressEngine} from '@nguniversal/express-engine';
 import * as express from 'express';
-import { join } from 'path';
+import {existsSync} from 'fs';
+import {join} from 'path';
 
-import { AppServerModule } from './src/main.server';
-import { RESPONSE } from '@nguniversal/express-engine/tokens';
+import {AppServerModule} from './src/main.server';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/dartplayer-web/browser');
-
-  const locales = ["pt-BR", "en-US"];
+  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index' : 'index';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/main/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -32,35 +31,8 @@ export function app(): express.Express {
 
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
-    const preferredLanguage = Intl.DateTimeFormat().resolvedOptions().locale;
-
-    let locale = "pt-BR"
-
-    if (preferredLanguage.includes("pt")) {
-      locale = "pt-BR"
-    } else {
-      locale = "en-US"
-    }
-
-    res.render(`${locale}/index.html`, {
-      req, providers: [
-        { provide: APP_BASE_HREF, useValue: req.baseUrl },
-        { provide: RESPONSE, useValue: (res) }
-      ]
-    });
+    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
-
-  locales.forEach((locale) => {
-    const indexHtml = `${locale}/index.html`
-    server.get(`/${locale}`, (req, res) => {
-      res.render(indexHtml, {
-        req, providers: [
-          { provide: APP_BASE_HREF, useValue: req.baseUrl },
-          { provide: RESPONSE, useValue: (res) }
-        ]
-      });
-    });
-  })
 
   return server;
 }
