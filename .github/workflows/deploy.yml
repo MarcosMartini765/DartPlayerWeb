@@ -1,0 +1,28 @@
+name: Deploy to master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy_website:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install firebase-tools
+        run: npm install firebase-tools
+
+      - name: Install angular-cli
+        run: npm install @angular/cli
+
+      - name: Install dependencies and build for production
+        run: npm ci && npm run prerender
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_DARTPLAYER_94FE5 }}"
+          projectId: "${{ secrets.FIREBASE_PROJECT_ID }}"
+          channelId: live 
