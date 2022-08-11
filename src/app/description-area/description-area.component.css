@@ -6,8 +6,15 @@
     margin: auto;
 }
 
+.center > h2 {
+    font-weight: 700;
+    letter-spacing: -0.125rem;
+    font-size: 3rem;
+    line-height: 1; 
+}
+
 @media only screen and (max-width: 600px) {
     .center > h2 {
-        font-size: 4vw;
+        font-size: 2rem;
     }
 }

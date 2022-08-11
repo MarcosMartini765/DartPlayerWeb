@@ -14,15 +14,19 @@
 }
 
 .title {
-    color: var(--accent-color);
     font-weight: bold;
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.125rem;
     text-align: center;
+    font-size: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
     .images {
         gap: 2rem;
         justify-content: center;
+    }
+
+    .title {
+        font-size: 2rem;
     }
 }
