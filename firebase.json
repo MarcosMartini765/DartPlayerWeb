@@ -1,7 +1,6 @@
 {
   "hosting": {
-    "public": "dist/dartplayer-web/",
-    "404": "",
+    "public": "dist/dartplayer-web/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -10,10 +9,13 @@
     "rewrites": [
       {
         "source": "**",
-        "run": {
-          "serviceId": "dartplayer",
-          "region": "southamerica-east1"
-        }
+        "destination": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=604800"
+          }
+        ]
       }
     ]
   }
