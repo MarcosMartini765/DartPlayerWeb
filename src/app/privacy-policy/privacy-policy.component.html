@@ -1,20 +1,20 @@
 <div class="center">
     <h1 id={{privacyPolicyId}} class="title">
-        Privacy policy
+        {{ privacyPolicy.title }}
     </h1>
     <section class="section">
-        <h2>What information we collect</h2>
+        <h2>{{ privacyPolicy['what-info'].title }}</h2>
         <p>
-            We collect information that help us improve the app's stability, such as errors and crashes. <br>
-            We also collect the phone model, country and the Android version.
+            {{ privacyPolicy['what-info'].first }} <br>
+            {{ privacyPolicy['what-info'].second }}
         </p>
-        <h2>How we use information we collect</h2>
+        <h2>{{ privacyPolicy['how-info'].title }}</h2>
         <p>
-            We collect information to help mitigate crashes and errors so that the user experience is in line with our goals. <br>
+            {{ privacyPolicy['how-info'].first }} <br>
         </p>
-        <h2>Opt-out of data collection</h2>
+        <h2>{{ privacyPolicy['data-collection'].title }}</h2>
         <p>
-            You can opt-out of data collection by disabling this option in the app's settings.
+            {{ privacyPolicy['data-collection'].title }}
         </p>
     </section>
 </div>

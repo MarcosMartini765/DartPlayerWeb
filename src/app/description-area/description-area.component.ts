@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 
 @Component({
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptionAreaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _translation: TranslationService
+  ) { }
+
+  getStrings = this._translation.getDescriptionArea()
 
   ngOnInit(): void {
   }

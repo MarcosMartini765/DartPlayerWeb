@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-link-area',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinkAreaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _translation: TranslationService
+  ) { }
+
+  linkArea = this._translation.getLinkArea()
 
   ngOnInit(): void {
   }

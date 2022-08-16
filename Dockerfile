@@ -11,6 +11,8 @@ COPY . .
 ENV PORT 8080
 ENV HOST 0.0.0.0
 
-RUN npm run prerender && node_modules/.bin/ng run dartplayer-web:server
+EXPOSE 8080
+
+RUN npm run prerender
 
 CMD ["npm", "run", "serve:ssr"]

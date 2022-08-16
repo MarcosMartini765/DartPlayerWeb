@@ -19,6 +19,7 @@ import { AppBarComponent } from './app-bar/app-bar.component';
 import { HomeComponent } from './home/home.component'
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TranslationService } from './translation.service';
 
 @NgModule({
   declarations: [
