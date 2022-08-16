@@ -11,14 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install firebase-tools
-        run: npm install firebase-tools
-
       - name: Install angular-cli
         run: npm install @angular/cli
 
       - name: Install dependencies and build for production
         run: npm ci && npm run prerender
+
+      - name: Test
+        run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI  
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
