@@ -16,6 +16,7 @@ export class TranslationService {
     if (!navigator.language.includes("pt")) {
       this.language = "en"
     }
+    document.documentElement.lang = this.language
   }
 
   getPrivacyPolicy() {
@@ -51,5 +52,12 @@ export class TranslationService {
       return portuguese['screenshots-area']
     }
     return english['screenshots-area']
+  }
+
+  getAppBarArea() {
+    if (this.language == this.ptBRlanguage) {
+      return portuguese['app-bar-area']
+    }
+    return english['app-bar-area']
   }
 }

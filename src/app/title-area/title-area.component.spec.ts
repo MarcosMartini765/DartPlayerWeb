@@ -20,4 +20,10 @@ describe('TitleAreaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have a section with a class named center', () => {
+    const element: HTMLElement = fixture.nativeElement
+    const section: HTMLElement = element.querySelector('section')!
+    expect(section.className).toEqual('center');
+  });
 });

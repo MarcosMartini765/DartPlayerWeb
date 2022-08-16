@@ -44,5 +44,9 @@
         "light": "Light",
         "light-mode": "Light mode",
         "title": "Screenshots"
+    },
+    "app-bar-area": {
+        "privacy": "Privacy",
+        "privacy-alt": "Click to see privacy policy"
     }
 }

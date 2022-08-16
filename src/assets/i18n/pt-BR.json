@@ -44,5 +44,9 @@
         "light": "Claro",
         "light-mode": "Modo claro",
         "title": "Capturas de tela"
+    },
+    "app-bar-area": {
+        "privacy": "Privacidade",
+        "privacy-alt": "Clique para ver a política de privacidade"
     }
 }
