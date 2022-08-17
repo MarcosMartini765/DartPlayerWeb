@@ -38,7 +38,8 @@ describe('AppBarComponent', () => {
   it('should have a img tag in the first button', () => {
     const appBarElement: HTMLElement  = fixture.nativeElement
     const buttons: NodeListOf<HTMLButtonElement> = appBarElement.querySelectorAll('button')!
-    expect(buttons[0].children[0].className).toContain('appIcon')
+    const img = buttons[0].children[0]
+    expect(img).toBeTruthy()
   });
 
   it('should have Privacy text in the second button', () => {

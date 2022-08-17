@@ -1,10 +1,10 @@
 <mat-toolbar>
-    <button mat-icon-button aria-label="website icon" i18n-aria-label>
-        <img class="appIcon" src={{appIconUrl}} alt="DartPlayer" i18n-alt/>
+    <button mat-icon-button aria-label="website icon">
+        <img src={{appIconUrl}} alt="DartPlayer" width="28px" height="28px" />
     </button>
     <span>DartPlayer</span>
     <span class="spacer"></span>
-    <button i18n mat-button aria-label="Click to see privacy policy" (click)="scrollToPrivacyPolicyOnClick()">
+    <button mat-button aria-label="Click to see privacy policy" (click)="scrollToPrivacyPolicyOnClick()">
         {{ appBarArea.privacy }}
     </button>
 </mat-toolbar>
