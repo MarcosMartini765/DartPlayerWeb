@@ -27,10 +27,6 @@
     width: 40%;
 }
 
-.image {
-    margin: 0;
-}
-
 @media only screen and (max-width: 800px) {
     .github-card {
         width: 100%;
@@ -41,10 +37,6 @@
     }
 
     .play-store-link {
-        width: 100%;
-    }
-
-    .image {
         width: 100%;
     }
 }
