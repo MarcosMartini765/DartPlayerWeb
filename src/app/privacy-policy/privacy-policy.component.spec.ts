@@ -80,7 +80,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const ps = section.querySelectorAll('p')
     const p = ps[2]
-    expect(p.textContent?.trim()).toEqual(translation.getPrivacyPolicy()['data-collection'].title);
+    expect(p.textContent?.trim()).toEqual(translation.getPrivacyPolicy()['data-collection'].first);
   });
 
 });
