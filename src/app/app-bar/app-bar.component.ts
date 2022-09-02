@@ -1,6 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { APP_ICON_URL, PRIVACY_POLICY_ID } from "../constants/constants";
-import { DOCUMENT } from "@angular/common";
 import { TranslationService } from '../translation.service';
 
 @Component({
@@ -11,14 +10,8 @@ import { TranslationService } from '../translation.service';
 export class AppBarComponent implements OnInit {
 
   constructor(
-    @Inject(DOCUMENT) private document: Document,
     private _translation: TranslationService
   ) { }
-
-  scrollToPrivacyPolicyOnClick() {
-    const element = this.document.getElementById(PRIVACY_POLICY_ID)
-    element?.scrollIntoView()
-  }
 
   appBarArea = this._translation.getAppBarArea()
 
@@ -26,5 +19,6 @@ export class AppBarComponent implements OnInit {
   }
 
   appIconUrl: string = APP_ICON_URL
+  privacyPolicyId: string = `#${PRIVACY_POLICY_ID}`
 
 }

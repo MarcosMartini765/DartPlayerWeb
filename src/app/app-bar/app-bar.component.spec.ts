@@ -44,7 +44,7 @@ describe('AppBarComponent', () => {
 
   it('should have Privacy text in the second button', () => {
     const appBarElement: HTMLElement  = fixture.nativeElement
-    const buttons: NodeListOf<HTMLButtonElement> = appBarElement.querySelectorAll('button')!
-    expect(buttons[1].textContent?.trim()).toEqual(translation.getAppBarArea().privacy)
+    const a: HTMLElement = appBarElement.querySelector('a')!
+    expect(a.textContent?.trim()).toEqual(translation.getAppBarArea().privacy)
   });
 });

@@ -12,11 +12,13 @@ export class TranslationService {
 
   private language = "pt-BR"
 
+  resources = {}
+
   constructor() { 
     if (!navigator.language.includes("pt")) {
       this.language = "en"
     }
-    document.documentElement.lang = this.language
+    document.documentElement.lang = this.language;
   }
 
   getPrivacyPolicy() {

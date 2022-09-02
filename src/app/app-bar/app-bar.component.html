@@ -4,7 +4,5 @@
     </button>
     <span>DartPlayer</span>
     <span class="spacer"></span>
-    <button mat-button aria-label="Click to see privacy policy" (click)="scrollToPrivacyPolicyOnClick()">
-        {{ appBarArea.privacy }}
-    </button>
+    <a mat-button href={{privacyPolicyId}}>{{ appBarArea.privacy }}</a>
 </mat-toolbar>
