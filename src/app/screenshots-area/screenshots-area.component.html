@@ -1,21 +1,21 @@
 <section class="center">
-    <h1 class="title">{{ screenshotsArea.title }}</h1>
+    <h1 class="title">Screenshots</h1>
     <div class="images">
         <app-image-tile
             [src]="dashboardPhotoUrl"
-            [alt]="screenshotsArea.dashboard"
-            [subtitle]="screenshotsArea['initial-screen']"
+            alt="Dashboard"
+            subtitle="Initial screen"
             ></app-image-tile>
         <app-image-tile
             src={{darkPhotoUrl}}
-            [alt]="screenshotsArea.dark"
-            [subtitle]="screenshotsArea['dark-mode']"
+            alt="Dark"
+            subtitle="Dark mode"
             ></app-image-tile>
 
         <app-image-tile
             src={{lightPhotoUrl}}
-            [alt]="screenshotsArea.light"
-            [subtitle]="screenshotsArea['light-mode']"
+            alt="Light"
+            subtitle="Light mode"
             ></app-image-tile>
     </div>
 </section>

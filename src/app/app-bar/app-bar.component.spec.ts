@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TranslationService } from '../translation.service';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { AppBarComponent } from './app-bar.component';
+import english from '../../assets/i18n/en.json'
 
 describe('AppBarComponent', () => {
   let component: AppBarComponent;
   let fixture: ComponentFixture<AppBarComponent>;
-  let translation = new TranslationService()
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppBarComponent ]
+      declarations: [ AppBarComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
 
@@ -45,6 +47,6 @@ describe('AppBarComponent', () => {
   it('should have Privacy text in the second button', () => {
     const appBarElement: HTMLElement  = fixture.nativeElement
     const a: HTMLElement = appBarElement.querySelector('a')!
-    expect(a.textContent?.trim()).toEqual(translation.getAppBarArea().privacy)
+    expect(a.textContent?.trim()).toEqual(english['app-bar-area'].privacy)
   });
 });

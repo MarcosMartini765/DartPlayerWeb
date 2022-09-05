@@ -1,7 +1,6 @@
 import { DOCUMENT, Location, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { PRIVACY_POLICY_ID, URL_SCROLL_TO_PRIVACY_POLICY } from "../constants/constants";
-import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -13,7 +12,6 @@ export class PrivacyPolicyComponent implements OnInit {
   constructor(
     @Inject(DOCUMENT) private doc: Document,
     @Inject(Location) private location: Location,
-    private translation: TranslationService
   ) { }
 
   scrollTo() {
@@ -27,8 +25,6 @@ export class PrivacyPolicyComponent implements OnInit {
   }
 
   @Input() privacyPolicyId = PRIVACY_POLICY_ID;
-
-  privacyPolicy = this.translation.getPrivacyPolicy()
 
   ngOnInit(): void {
     this.scrollTo()

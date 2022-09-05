@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslationService } from '../translation.service';
-
 
 @Component({
   selector: 'app-description-area',
@@ -8,12 +6,6 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./description-area.component.css']
 })
 export class DescriptionAreaComponent implements OnInit {
-
-  constructor(
-    private _translation: TranslationService
-  ) { }
-
-  getStrings = this._translation.getDescriptionArea()
 
   ngOnInit(): void {
   }

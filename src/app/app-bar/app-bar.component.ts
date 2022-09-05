@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { APP_ICON_URL, PRIVACY_POLICY_ID } from "../constants/constants";
-import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'app-app-bar',
@@ -8,12 +7,6 @@ import { TranslationService } from '../translation.service';
   styleUrls: ['./app-bar.component.css']
 })
 export class AppBarComponent implements OnInit {
-
-  constructor(
-    private _translation: TranslationService
-  ) { }
-
-  appBarArea = this._translation.getAppBarArea()
 
   ngOnInit(): void {
   }

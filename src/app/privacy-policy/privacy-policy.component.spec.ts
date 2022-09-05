@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TranslationService } from '../translation.service';
-
 import { PrivacyPolicyComponent } from './privacy-policy.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import english from '../../assets/i18n/en.json'
 
 describe('PrivacyPolicyComponent', () => {
   let component: PrivacyPolicyComponent;
   let fixture: ComponentFixture<PrivacyPolicyComponent>;
-  const translation = new TranslationService()
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PrivacyPolicyComponent ]
+      declarations: [ PrivacyPolicyComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
 
@@ -40,7 +42,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const h2s = section.querySelectorAll('h2')
     const h2 = h2s[0]
-    expect(h2.textContent).toEqual(translation.getPrivacyPolicy()['what-info'].title);
+    expect(h2.textContent).toEqual(english['privacy-policy']['what-info'].title);
   });
 
   it('should render the what-info first h2', () => {
@@ -48,7 +50,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const ps = section.querySelectorAll('p')
     const p = ps[0]
-    expect(p.textContent?.trim()).toContain(translation.getPrivacyPolicy()['what-info'].first);
+    expect(p.textContent?.trim()).toContain(english['privacy-policy']['what-info'].first);
   });
 
   it('should render the how-info title', () => {
@@ -56,7 +58,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const h2s = section.querySelectorAll('h2')
     const h2 = h2s[1]
-    expect(h2.textContent?.trim()).toContain(translation.getPrivacyPolicy()['how-info'].title);
+    expect(h2.textContent?.trim()).toContain(english['privacy-policy']['how-info'].title);
   });
 
   it('should render the how-info first h2', () => {
@@ -64,7 +66,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const ps = section.querySelectorAll('p')
     const p = ps[1]
-    expect(p.textContent?.trim()).toContain(translation.getPrivacyPolicy()['how-info'].first);
+    expect(p.textContent?.trim()).toContain(english['privacy-policy']['how-info'].first);
   });
 
   it('should render the data-collection title', () => {
@@ -72,7 +74,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const h2s = section.querySelectorAll('h2')
     const h2 = h2s[2]
-    expect(h2.textContent?.trim()).toEqual(translation.getPrivacyPolicy()['data-collection'].title);
+    expect(h2.textContent?.trim()).toEqual(english['privacy-policy']['data-collection'].title);
   });
 
   it('should render the data-collection first h2', () => {
@@ -80,7 +82,7 @@ describe('PrivacyPolicyComponent', () => {
     const section: HTMLElement = element.querySelector('section')!
     const ps = section.querySelectorAll('p')
     const p = ps[2]
-    expect(p.textContent?.trim()).toEqual(translation.getPrivacyPolicy()['data-collection'].first);
+    expect(p.textContent?.trim()).toEqual(english['privacy-policy']['data-collection'].first);
   });
 
 });

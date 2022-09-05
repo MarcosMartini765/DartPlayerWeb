@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TranslationService } from '../translation.service';
-
 import { DescriptionAreaComponent } from './description-area.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import english from '../../assets/i18n/en.json'
 
 describe('DescriptionAreaComponent', () => {
   let component: DescriptionAreaComponent;
   let fixture: ComponentFixture<DescriptionAreaComponent>;
-  const translate = new TranslationService()
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DescriptionAreaComponent ]
+      declarations: [ DescriptionAreaComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
 
@@ -33,21 +35,21 @@ describe('DescriptionAreaComponent', () => {
     const descriptionComponent: HTMLElement = fixture.nativeElement
     const h2s = descriptionComponent.querySelectorAll('h2')
     const h2 = h2s[0]
-    expect(h2.textContent).toEqual(translate.getDescriptionArea().first);
+    expect(h2.textContent).toEqual(english['description-area'].first);
   });
 
   it('should have the right text for the second h2', () => {
     const descriptionComponent: HTMLElement = fixture.nativeElement
     const h2s = descriptionComponent.querySelectorAll('h2')
     const h2 = h2s[1]
-    expect(h2.textContent).toEqual(translate.getDescriptionArea().second);
+    expect(h2.textContent).toEqual(english['description-area'].second);
   });
 
   it('should have the right text for the third h2', () => {
     const descriptionComponent: HTMLElement = fixture.nativeElement
     const h2s = descriptionComponent.querySelectorAll('h2')
     const h2 = h2s[2]
-    expect(h2.textContent).toEqual(translate.getDescriptionArea().third);
+    expect(h2.textContent).toEqual(english['description-area'].third);
   });
 
   it('should have a section with a class name of center', () => {

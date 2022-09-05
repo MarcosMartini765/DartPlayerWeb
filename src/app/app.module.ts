@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,6 @@ import { AppBarComponent } from './app-bar/app-bar.component';
 import { HomeComponent } from './home/home.component'
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslationService } from './translation.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,8 @@ import { TranslationService } from './translation.service';
     MatIconModule,
     HttpClientModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class AppModule { }

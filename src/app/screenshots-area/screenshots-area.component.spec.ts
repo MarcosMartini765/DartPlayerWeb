@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { ScreenshotsAreaComponent } from './screenshots-area.component';
 
 describe('ScreenshotsAreaComponent', () => {
@@ -8,7 +8,10 @@ describe('ScreenshotsAreaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenshotsAreaComponent ]
+      declarations: [ ScreenshotsAreaComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
 

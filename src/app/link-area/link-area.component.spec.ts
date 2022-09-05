@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { LinkAreaComponent } from './link-area.component';
 
 describe('LinkAreaComponent', () => {
@@ -8,7 +8,10 @@ describe('LinkAreaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinkAreaComponent ]
+      declarations: [ LinkAreaComponent ],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ]
     })
     .compileComponents();
 
