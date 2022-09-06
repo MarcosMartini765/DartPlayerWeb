@@ -9,6 +9,10 @@
     margin: auto;
 }
 
+.title {
+    letter-spacing: var(--special-letter-spacing);
+}
+
 .backButton {
     background-color: var(--accent-color);
     color: white;

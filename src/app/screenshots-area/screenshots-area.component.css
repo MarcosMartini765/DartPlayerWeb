@@ -15,7 +15,7 @@
 
 .title {
     font-weight: bold;
-    letter-spacing: -0.125rem;
+    letter-spacing: var(--special-letter-spacing);
     text-align: center;
     font-size: 3rem;
 }

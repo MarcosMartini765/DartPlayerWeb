@@ -6,7 +6,7 @@
 
 .center > h2 {
     font-weight: 700;
-    letter-spacing: -0.125rem;
+    letter-spacing: var(--special-letter-spacing);
     font-size: 3rem;
     line-height: 1; 
 }
